@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="title" content="[Dacade] CeloShop">
+    <meta name="author" content="Emmanuel Joseph(JET)">
+    <meta name="image" content="https://i.ibb.co/jJc1TQy/celoshop.png">
+    <meta name="description" content="A mini e-commerce testnet dApp that utilizes Celo Blockchain technologies.">
+    <meta name="keywords" content="celo, celo blockchain, blockchain, e-commerce, ecommerce, dApp, dapp, decentralized, decentralized application, dacade, testnet, technologies, technology, nigeria, emmanueljet, emmanuel joseph, jet, emmanuel joseph(jet)">
+    <link rel="canonical" href="https://emmanueljet.github.io/celoshop-dacade" />
+    <link rel="shortcut icon" href="https://celo.org/favicon.ico">
+
+    <title>[Dacade] CeloShop</title>
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://emmanueljet.github.io/celoshop-dacade" />
+    <meta property="og:title" content="[Dacade] CeloShop" />
+    <meta property="og:description" content="A mini e-commerce testnet dApp that utilizes Celo Blockchain technologies." />
+    <meta property="og:image" content="https://i.ibb.co/jJc1TQy/celoshop.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="CeloShop" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://emmanueljet.github.io/celoshop-dacade">
+    <meta name="twitter:creator" content="@emmanuelJet_">
+    <meta name="twitter:title" content="[Dacade] CeloShop">
+    <meta name="twitter:description" content="A mini e-commerce testnet dApp that utilizes Celo Blockchain technologies.">
+    <meta name="twitter:image:src" content="https://i.ibb.co/jJc1TQy/celoshop.png">
+    <meta name="twitter:image:alt" content="CeloShop">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"/>
+
+    <style>
+      :root {
+        --bs-font-sans-serif: "Open Sans", sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        background-color: rgba(0,0,0,0);
+        width: 9px;
+      }
+      ::-webkit-scrollbar {
+        height: 16px;
+        overflow: visible;
+      }
+      ::-webkit-scrollbar-button {
+        height: 0;
+        width: 0;
+      }
+      body::-webkit-scrollbar-corner {
+        background-clip: padding-box;
+        background-color: #f5f5f5;
+        border: solid #fff;
+        border-width: 3px 0 0 3px;
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+        box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+      body::-webkit-scrollbar-thumb {
+        border-width: 1px 1px 1px 5px;
+      }
+      ::-webkit-scrollbar-thumb {
+        border: 1px solid rgba(255,255,255,0.4);
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        background: rgba(33, 37, 41, 0.5);
+      }
+      ::-webkit-scrollbar-thumb {
+        border: solid transparent;
+        border-width: 1px 1px 1px 6px;
+        min-height: 28px;
+        padding: 100px 0 0;
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+      }
+      ::-webkit-scrollbar-track {
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 0 0 0 4px;
+      }
+      body::-webkit-scrollbar-track-piece {
+        background-clip: padding-box;
+        background-color: #f5f5f5;
+        border: solid #fff;
+        border-width: 0 0 0 3px;
+        -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+        box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+      }
+
+      .section-header {
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+      }
+      .section-content {
+        margin-top: 30px;
+      }
+
+      @media (min-width: 576px) {
+        .card {
+          border: 0;
+          box-shadow: rgb(0 0 0 / 5%) 0px 10px 20px;
+          border-radius: 10px;
+        }
+        .card-img-top {
+          width: 100%;
+          height: 20vw;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="py-5 text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%283%29.jpg'); background-repeat: no-repeat; background-size: cover; height: fit-content">
+      <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+        <div class="text-center white-text mx-5">
+          <h1 class="mb-4">Welcome to CeloShop</h1>
+
+          <p class="mb-4">
+            <strong>A mini e-commerce testnet dApp that utilizes Celo Blockchain technologies.</strong>
+          </p>
+
+          <p>by</p>
+
+          <a target="_blank" href="https://www.linkedin.com/in/emmanuelJet" class="btn btn-outline-light btn-lg">Emmanuel Joseph(JET)</a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CeloShop</a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#shop-container">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seller-container">Seller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#buyer-container">Buyer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courier-container">Courier</a>
+            </li>
+            <li class="nav-item" style="cursor: default;">
+              <span class="border border-secondary nav-link rounded-pill text-center text-light">
+                <span id="celo-balance">0</span> CELO, <span id="cUSD-balance">0</span> cUSD
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mb-5">
+      <div class="alert alert-warning mt-2 alert-dismissible fade show sticky-top" role="alert">
+        <span id="notification">⌛ Loading...</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <section id="shop-container" class="mt-4">
+        <h2 class="section-header">CeloShop</h2>
+        <div class="section-content">
+          <div id="shopJS" class="row">
+            <div class="col-12 text-center">Loading...</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seller-container" class="my-4">
+        <h2 class="section-header">CeloSeller</h2>
+        <div class="section-content">
+          <div class="row text-center">
+            <div class="col-6"><button type="button" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#addProductModel">Add Product</button></div>
+            <div class="col-6"><button type="button" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#processProductModal">Process Product</button></div>
+          </div>
+          <div class="mt-5">
+            <h3>Sales Record</h3>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Ref</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Buyer</th>
+                    <th scope="col">Seller</th>
+                  </tr>
+                </thead>
+                <tbody id="sellerJS">
+                  <tr>
+                    <th colspan="6" class="text-center text-muted">Loading...</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="buyer-container" class="mb-4">
+        <h2 class="section-header">CeloBuyer</h2>
+        <div class="section-content">
+          <div>
+            <h3>Seller Checks</h3>
+            <div>
+              <h4>Check Purchase Status</h4>
+              <form class="row">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="buyerStatusSaleID" placeholder="Sale ID">
+                      <label for="buyerStatusSaleID">Sale ID</label>
+                    </div>
+                  </div>
+                  <div class="col-3 d-grid gap-2">
+                    <button type="button" class="btn btn-lg btn-dark" id="buyerPurchaseStatusBtn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="my-3">
+              <h4>Receive Item</h4>
+              <form class="row">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="buyerReceiveItemSaleID" placeholder="Sale ID">
+                      <label for="buyerReceiveItemSaleID">Sale ID</label>
+                    </div>
+                  </div>
+                  <div class="col-3 d-grid gap-2">
+                    <button type="button" class="btn btn-lg btn-dark" id="buyerReceiveItemBtn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr class="my-4 py-1">
+          <div>
+            <h3>Courier Checks</h3>
+            <div>
+              <h4>Check Courier Status</h4>
+              <form class="row">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="buyerCourierStatusItemID" placeholder="Item ID">
+                      <label for="buyerCourierStatusItemID">Item ID</label>
+                    </div>
+                  </div>
+                  <div class="col-3 d-grid gap-2">
+                    <button type="button" class="btn btn-lg btn-dark" id="buyerCourierStatusBtn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="my-3">
+              <h4>Check Courier Location</h4>
+              <form class="row">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="buyerCourierLocationItemID" placeholder="Item ID">
+                      <label for="buyerCourierLocationItemID">Item ID</label>
+                    </div>
+                  </div>
+                  <div class="col-3 d-grid gap-2">
+                    <button type="button" class="btn btn-lg btn-dark" id="buyerCourierLocationBtn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courier-container" class="mb-5">
+        <h2 class="section-header">CeloCourier</h2>
+        <div class="section-content">
+          <div class="row text-center">
+            <div class="col-6"><button type="button" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#changeLocationModel">Change Location</button></div>
+            <div class="col-6"><button type="button" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#deliverItemModal">Deliver Item</button></div>
+          </div>
+          <div class="mt-5">
+            <h3>Courier Record</h3>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Buyer</th>
+                    <th scope="col">Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody id="courierJS">
+                  <tr>
+                    <th colspan="6" class="text-center text-muted">Loading...</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div>
+      <div>
+        <div class="modal fade" id="addProductModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sellerAddProductModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sellerAddProductModal">Seller Add Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="newProductSku" placeholder="Product SKU">
+                      <label for="newProductSku">SKU</label>
+                    </div>
+                    <div class="form-floating my-3">
+                      <input type="number" class="form-control" id="newProductPrice" placeholder="Product Price">
+                      <label for="newProductPrice">Price</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="newProductName" placeholder="Product Name">
+                      <label for="newProductName">Name</label>
+                    </div>
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="newProductImgUrl" placeholder="Product Image URL">
+                      <label for="newProductImgUrl">Image URL</label>
+                    </div>
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Product Description" id="newProductDescription" style="height: 90px"></textarea>
+                      <label for="newProductDescription">Description</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger border" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" id="newProductBtn" data-bs-dismiss="modal">Add product</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="processProductModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sellerProcessProductModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sellerProcessProductModal">Seller Process Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="sellerSaleID" placeholder="Sale ID">
+                      <label for="sellerSaleID">Sale ID</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="sellerProductID" placeholder="Product ID">
+                      <label for="sellerProductID">Product ID</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger border" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" id="processProductBtn" data-bs-dismiss="modal">Process product</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="modal fade" id="changeLocationModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="courierChangeLocationModel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="courierChangeLocationModel">Courier Change Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="courierItemID" placeholder="Item ID">
+                      <label for="courierItemID">Item ID</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="newItemCity" placeholder="Item City">
+                      <label for="newItemCity">City</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger border" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" id="changeLocationBtn" data-bs-dismiss="modal">Change Location</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="deliverItemModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="courierDeliverItemModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="courierDeliverItemModal">Courier Deliver Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="courier2ItemID" placeholder="Item ID">
+                      <label for="courier2ItemID">Item ID</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="finalItemCity" placeholder="Final City">
+                      <label for="finalItemCity">City</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger border" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" id="deliverItemBtn" data-bs-dismiss="modal">Deliver Item</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center font-small mt-4 fixed-bottom">
+      <div class="footer-copyright py-3">
+        &copy; <span id="currentDate"></span> Copyright:
+        <a href="https://emmanueljet.github.io/emmanueljet" target="_blank" class="text-white"> JET</a>. 
+         All Right Reserved
+      </div>
+    </footer>
+
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"></script>
+    <script src="https://unpkg.com/ethereum-blockies@0.1.1/blockies.min.js"></script>
+  </body>
+</html>

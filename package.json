@@ -1,0 +1,39 @@
+{
+  "name": "celoshop-dacade",
+  "private": true,
+  "version": "1.0.0",
+  "description": "[Dacade] A mini e-commerce testnet dApp that utilizes Celo Blockchain technologies.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "build": "webpack",
+    "start": "servez -S dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emmanuelJet/celoshop-dacade.git"
+  },
+  "keywords": [
+    "dacade",
+    "celo",
+    "blockchain",
+    "emmanueljet"
+  ],
+  "author": "Emmanuel Joseph (https://www.linkedin.com/in/emmanuelJet)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/emmanuelJet/celoshop-dacade/issues"
+  },
+  "homepage": "https://emmanueljet.github.io/celoshop-dacade",
+  "dependencies": {
+    "@celo/contractkit": "^1.0.2",
+    "bignumber.js": "^9.0.1"
+  },
+  "devDependencies": {
+    "friendly-errors-webpack-plugin": "1.7.0",
+    "html-webpack-plugin": "3.2.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
