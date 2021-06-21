@@ -18,7 +18,6 @@
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat">
 <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/emmanueljet/celoshop-dacade">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/emmanuelJet/celoshop-dacade">
-<img alt="GitHub package.json dynamic" src="https://img.shields.io/github/package-json/dacade,%20celo,%20emmanueljet/emmanuelJet/celoshop-dacade">
 </p>
 
 ## What is CeloShop?
