@@ -1,6 +1,7 @@
 # CeloShop Contracts
 
 The CeloShop SmartContracts Documentation
+
 ## CeloShopCourier
 
 [0x5EFCD2a1Ad2dD46518356A94Dd2393E7c7B607e8](https://alfajores-blockscout.celo-testnet.org/address/0x5EFCD2a1Ad2dD46518356A94Dd2393E7c7B607e8/transactions)
