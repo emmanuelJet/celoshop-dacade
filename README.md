@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/tD3MC3f/celoshop.png" alt="CeloShop"/>
+  <img src="https://i.ibb.co/tD3MC3f/celoshop.png" alt="CeloShop Dacade"/>
 </p>
 
 <p align="center">
