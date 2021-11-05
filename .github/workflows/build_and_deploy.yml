@@ -10,19 +10,23 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 15.x, 16.x]
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     
-    - name: Install Node.js
-      uses: actions/setup-node@v1
+    - name: Install Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
       with:
-        node-version: 12.x
+        node-version: ${{ matrix.node-version }}
     
-    - name: Install NPM packages
+    - name: Install NPM dependencies
       run: npm install
     
-    - name: Build project
+    - name: Build æpp
       run: npm run build
 
     - name: Upload production-ready build files
@@ -32,7 +36,7 @@ jobs:
         path: ./dist
   
   deploy:
-    name: Deploy
+    name: Deploy æpp
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
